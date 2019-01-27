@@ -24,13 +24,13 @@ $(document).ready(function() {
 
     // Smooth Scrolling: Smooth scrolls to an ID on the current page.
     // To use this feature, add a link on your page that links to an ID, and add the .page-scroll class to the link itself. See the docs for more details.
-    $('a.page-scroll').bind('click', function(event) {
+/*     $('.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
-    });
+    }); */
 
     // Activates floating label headings for the contact form.
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
