@@ -103,12 +103,12 @@ fieldset[disabled] .btn-primary.active {
   background-color: white;
 }
 body {
-  font-family: 'Righteous','NanumSquare', 'ë‚˜ëˆ”ê³ ë”•';
+  font-family:'Raleway', sans-serif; color:#333;
   font-size: 16px;
   font-weight: 300;
 }
 a {
-  color: #FFC153;
+  color: rgb(228, 147, 18);
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -1347,47 +1347,43 @@ ul, li{ list-style:none;}
 
 
 /*Profile*/
+.profile > div > div{ padding:100px 0 100px 0}
 .profile{ 
 	background-color:rgb(248, 204, 248);
   padding-bottom:0;
   text-align: center;
   height: 100%;
-  position: relative;
 }
 .section_out{padding: 50px;}
 .secTitle img{
 	display: inline-block;
     height:100px;
 }
-.profile > div > div{ padding:125px}
 .sec1_rel{position: relative;}
-#profileMe{position: absolute;top: 50%;left: 35%;transform: translate(-50%,-50%);}
-#profileMe,
-#profileText{ 
-  position: absolute;
-	display: inline-block; 
-  vertical-align: middle;
-  right:-20%;top: 50%;transform: translate(-50%,-50%);
-}
-#profileText div{margin: 10px;width: 100%;text-align: left;}
+#profileText{    float: left;
+  margin: -1% 0 0 4%;
+  max-width: 700px;
+  width: 800px;}
+#profileText div{margin: 2% 0;width: 100%;text-align: left;}
 
-.company_project{position: absolute;text-align: left;bottom: 2%;left: 53%;transform: translateX(-50%);}
+.company_project{text-align: left;padding-top:0 !important;margin-left:5%;}
 .company_project li{margin: 1%;}
 
-#profileMe a{
-	display: block;
-    text-align: right;
-	padding-right: 30px;
-}
-#profileMe > img {
-	width: 30%;
+.sec1_myinfo{}
+.sec1_myinfo:after{content: "";display: block;clear: both;}
+
+.profileMe{float: left;text-align: right;position: relative;}
+.profileMe img{border-radius: 50%;width: 50%;}
+.profileMe_border{
+  position: absolute;
+  display: inline-block;
+  border: 8px solid #FFC153;
   border-radius: 50%;
-}
-#profileMe a img{
-	display: inline-block;
-    width: 200px;
-    border: 8px solid #c94235;
-    border-radius: 50%;
+  width: 55%;
+  height: 100%;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%,-50%);
 }
 #profileText img{
 	display: block;
@@ -1434,10 +1430,10 @@ ul, li{ list-style:none;}
 	.secTitle img{ height:100px;}
 }
 @media (max-width:768px){
-	#profileMe,#profileText{ left: 50%; transform: translateX(-50%);display: block;}
-	/*#profileMe > img{ right:0;}*/
-	#profileMe a{ text-align: center; padding: 0;}
-	#profileMe > img{ right: 27%;}
+	.profileMe,#profileText{ left: 50%; transform: translateX(-50%);display: block;}
+	/*.profileMe > img{ right:0;}*/
+	.profileMe a{ text-align: center; padding: 0;}
+	.profileMe > img{ right: 27%;}
 	#profileText img:nth-child(1){display: none;}
 	#profileText img:nth-child(2){ display: block; padding: 50px 0; width: 70%; margin: 0 auto;}
 	#profileStep { background: none;}
@@ -1559,7 +1555,29 @@ h2#modalHonbab{ font-family: 'Do Hyeon'; font-weight: 500;}
 
 
 
-
+/***** main_ani *****/
+.main_ani{animation-fill-mode: forwards;animation-timing-function: ease-in-out;position:absolute;font-size: 10rem;color: white;font-weight: 1000;}
+.ani_text_1{top:0;left: 0;transform: translate(-50%,-50%);opacity: 0;}
+.ani_text_2{top:0;right: 0;transform: translate(-50%,-50%);opacity: 0;}
+.ani_text_3{bottom:0;left: 0;transform: translate(-50%,-50%);opacity: 0;}
+.ani_text_4{bottom:0;right:0;transform: translate(-50%,-50%);opacity: 0;}
+@keyframes leftUpShow{
+  0%{opacity: 0;}
+  90%{opacity: 1;top: 21%;left: 36%;}
+  100%{opacity: 1;top: 20%;left: 35%;}
+}
+@keyframes leftDownShow{
+  0%{opacity: 0;}
+  100%{opacity: 1;top: 55%;left: 35%;}
+}
+@keyframes rightUpShow {
+	0% {opacity:0;}
+	100% {opacity:1;top: 35%;left: 71%;}
+}
+@keyframes rightDownShow {
+	0% {opacity:0;}
+	100% {opacity:1;top: 70%;left: 68%;}
+}
 
 
 /*Skill Chart*/
